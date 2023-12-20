@@ -21,14 +21,14 @@
             fetch("https://data.moenv.gov.tw/api/v2/aqx_p_242?language=zh&api_key=c756761f-b277-420c-9ae3-bd6a4389f225")
                 .then((response) => response.json())
                 .then(data => {
-                    const airQualityValue =data.records[0].concentration;
-                    console.Log(data);
+                    const airQualityValue = data.records[0].concentration;
+                    console.log(data);
                     // 更新HTML頁面上的數值
                     airQualityElement.textContent = airQualityValue;
                 })
                 .catch((error) => {
                     console.log(error);
-                    console.error("無法獲取API數據：" + error);
+                    console.log("無法獲取API數據：" + error);
                 })
         }
 
